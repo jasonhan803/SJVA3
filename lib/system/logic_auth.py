@@ -78,7 +78,7 @@ class SystemLogicAuth(object):
             #             return SystemLogicAuth.get_auth_status(retry=False)
             #         else:
             #             ret['desc'] = '잘못된 값입니다. 다시 인증하세요.'
-            ret = {'ret' : True, 'desc' : '인증되었습니다. (회원등급:9, 포인트:99999)', 'level' : 9, 'point': 99999}
+            ret = {'ret' : True, 'desc' : '인증되었습니다. (회원등급:3, 포인트:99999)', 'level' : 3, 'point': 99999}
             return ret
         except Exception as exception: 
             logger.error('Exception:%s', exception)
@@ -102,7 +102,7 @@ class SystemLogicAuth(object):
             # ret['point'] = int(tmp[2])
             ret = {}
             ret['ret'] = True
-            ret['level'] = 9
+            ret['level'] = 3
             ret['point'] = 99999
             return ret
         except Exception as exception: 
@@ -166,7 +166,7 @@ class SystemLogicAuth(object):
             #     tmp = SystemLogicAuth.get_auth_status(retry=False)
             #     ret['ret'] = tmp['ret']
             #     ret['msg'] = tmp['desc']
-            ret = {'ret':True, 'msg':'총 9999개 등록<br>회원등급:9, 포인트:99999', 'level':9, 'point':99999}
+            ret = {'ret':True, 'msg':'총 9999개 등록<br>회원등급:3, 포인트:99999', 'level':3, 'point':99999}
             ModelSetting.set('auth_status', SystemLogicAuth.make_auth_status(ret['level'], ret['point']))
             return ret
         except Exception as exception: 

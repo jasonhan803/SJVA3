@@ -33,15 +33,15 @@ def prepare_starting():
             if os.path.exists(plugin_db_path):
                 os.remove(plugin_db_path)
         """
-        remove_plugins = ['klive', 'klive_plus', 'wavve', 'tving', 'lib_wvtool', 'wv_downloader', 'lib_wvtool']
-        for plugin in remove_plugins:
-            try:
-                plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'custom', plugin)
-                if os.path.exists(plugin_path) and os.path.exists(os.path.join(plugin_path, '.git')):
-                    shutil.rmtree(os.path.join(plugin_path, '.git'))
-            except Exception as exception:
-                print('Exception:%s' % exception)
-                print(traceback.format_exc())
+        # remove_plugins = ['klive', 'klive_plus', 'wavve', 'tving', 'lib_wvtool', 'wv_downloader', 'lib_wvtool']
+        # for plugin in remove_plugins:
+        #     try:
+        #         plugin_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'custom', plugin)
+        #         if os.path.exists(plugin_path) and os.path.exists(os.path.join(plugin_path, '.git')):
+        #             shutil.rmtree(os.path.join(plugin_path, '.git'))
+        #     except Exception as exception:
+        #         print('Exception:%s' % exception)
+        #         print(traceback.format_exc())
 
     except Exception as exception:
         print('Exception:%s' % exception)
